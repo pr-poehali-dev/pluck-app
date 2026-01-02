@@ -2,10 +2,11 @@ import { useState } from 'react';
 import FeedScreen from '@/components/FeedScreen';
 import ReaderScreen from '@/components/ReaderScreen';
 import LibraryScreen from '@/components/LibraryScreen';
+import CommunityScreen from '@/components/CommunityScreen';
 import ProfileScreen from '@/components/ProfileScreen';
 import BottomNav from '@/components/BottomNav';
 
-type Screen = 'feed' | 'reader' | 'library' | 'profile';
+type Screen = 'feed' | 'reader' | 'library' | 'community' | 'profile';
 
 export interface Article {
   id: string;
@@ -44,6 +45,7 @@ export default function Index() {
           <ReaderScreen article={selectedArticle} onBack={handleBackToFeed} />
         )}
         {activeScreen === 'library' && <LibraryScreen onArticleClick={handleArticleClick} />}
+        {activeScreen === 'community' && <CommunityScreen />}
         {activeScreen === 'profile' && <ProfileScreen />}
       </div>
       

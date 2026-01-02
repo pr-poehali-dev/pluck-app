@@ -1,6 +1,6 @@
 import Icon from '@/components/ui/icon';
 
-type Screen = 'feed' | 'reader' | 'library' | 'profile';
+type Screen = 'feed' | 'reader' | 'library' | 'community' | 'profile';
 
 interface BottomNavProps {
   activeScreen: Screen;
@@ -10,6 +10,7 @@ interface BottomNavProps {
 const NAV_ITEMS = [
   { screen: 'feed' as Screen, icon: 'Home', label: 'Лента' },
   { screen: 'library' as Screen, icon: 'BookMarked', label: 'Библиотека' },
+  { screen: 'community' as Screen, icon: 'Users', label: 'Сообщество' },
   { screen: 'profile' as Screen, icon: 'User', label: 'Профиль' }
 ];
 
